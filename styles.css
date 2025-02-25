@@ -1,0 +1,332 @@
+/* Обнуление отступов и базовые стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Переменные (можно менять под вашу гамму) */
+:root {
+  --main-font: 'Montserrat', sans-serif;
+  --bg-color: #fff;          /* Фон сайта */
+  --text-color: #fff;        /* Цвет текста (для тёмного фона Hero) */
+  --accent-color: #654321;   /* Древесный оттенок */
+}
+
+/* Базовые настройки тела страницы */
+body {
+  font-family: var(--main-font);
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  /* Чтобы контент не скрывался под фиксированной шапкой */
+  padding-top: 70px;
+}
+
+/* Контейнер */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ссылки */
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #523E2B;
+}
+
+/* 1. Header */
+.header {
+  width: 100%;
+  position: fixed; /* Фиксируем шапку */
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu li a {
+  font-weight: 500;
+}
+
+/* 2. Hero-секция */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* Центрируем контент */
+  text-align: center;        /* Текст по центру */
+  overflow: hidden;          /* Скрываем прокрутку, если видео больше контейнера */
+}
+
+.hero-video {
+  position: absolute;  
+  inset: 0;                 /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* Заполняет весь блок по пропорции */
+  z-index: -1;              /* Отправляем видео на задний план */
+}
+
+.hero-content {
+  position: relative;       /* Контент поверх видео */
+  max-width: 600px;         /* Ширина текста */
+  margin: 0 auto;           /* Центрируем */
+  color: #fff;              /* Светлый текст на фоне */
+}
+
+/* 3. Секция с фото */
+.middle-image {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.middle-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 4. О нас */
+.about {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #000; /* Для контраста на белом фоне */
+}
+
+.about-minimal {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+.about-minimal p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: #000;
+}
+
+/* Преимущества */
+/* Контейнер со всеми карточками преимуществ */
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Каждая карточка */
+.feature-item {
+  background: #fff; /* Или любой другой фон */
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.feature-item:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Общие стили для «иконки» */
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;   /* центрируем + отступ снизу */
+  border-radius: 50%;    /* делаем круг */
+}
+
+/* 1. Сроки */
+.icon-deadlines {
+  background: linear-gradient(135deg, #654321, #3d2a1a);
+}
+
+/* 2. Уникальный дизайн */
+.icon-unique {
+  background: linear-gradient(135deg, #cc8d42, #654321);
+}
+
+/* 3. Экологичность */
+.icon-eco {
+  background: linear-gradient(135deg, #6DBF4E, #4CAF50);
+}
+
+/* 4. Поддержка на каждом этапе */
+.icon-support {
+  background: linear-gradient(135deg, #654321, #523e2b);
+}
+
+/* Заголовок и текст внутри карточек */
+.feature-item h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #000; /* если фон светлый */
+}
+
+.feature-item p {
+  color: #555;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+
+/* 5. Каталог (портфолио) */
+.portfolio {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+/* Сетка 3 столбца, 2 ряда (итого 6 элементов) */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Карточка */
+.portfolio-item {
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-item img {
+  width: 100%;
+  display: block;
+}
+
+.portfolio-text {
+  padding: 1rem;
+  text-align: left;
+  color: #fff; /* Белый текст на тёмном фоне */
+}
+
+.portfolio-text h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* 6. Контакты (форма) */
+.contacts {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.contacts h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  cursor: pointer;
+}
+
+/* 7. Footer */
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Адаптивная верстка для узких экранов */
+@media screen and (max-width: 768px) {
+  /* Меню */
+  .nav-menu {
+    display: none; /* или организуйте бургер-меню */
+  }
+  /* Портфолио */
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* На мобильном 1 столбец */
+  }
+}

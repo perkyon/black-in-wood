@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Пример структуры лендинга">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black In Wood — Пример структуры</title>
+  <!-- Подключение шрифтов, стилей и т.д. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. Шапка (Header) -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Логотип слева -->
+        <div class="logo">
+          <a href="#">Black In Wood</a>
+        </div>
+        <!-- Меню навигации справа -->
+        <ul class="nav-menu">
+          <li><a href="#hero">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#portfolio">Каталог</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- 2. Hero-секция (главный экран) -->
+<section id="hero" class="hero">
+  <!-- Вставляем видео-тег -->
+  <video 
+    autoplay
+    muted
+    loop
+    playsinline
+    class="hero-video"
+  >
+    <source src="img/vedeos.mp4" type="video/mp4">
+    <!-- Можно добавить дополнительные форматы:
+         <source src="video.webm" type="video/webm">
+    -->
+    Ваш браузер не поддерживает видео фон.
+  </video>
+
+  <!-- Контент поверх видео -->
+  <div class="hero-content">
+    <h1>Black In Wood</h1>
+    <p>
+      Мастерская эксклюзивной мебели и декора из натурального дерева.<br>
+      Воплощаем самые смелые идеи с высочайшим качеством исполнения.
+    </p>
+  </div>
+</section>
+
+  <!-- 5. Каталог (Портфолио) из 6 элементов -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>Каталог</h2>
+      <div class="portfolio-grid">
+        <!-- Элемент 1 -->
+        <div class="portfolio-item">
+          <img src="img/стул1.jpg" alt="Стул 1">
+          <div class="portfolio-text">
+            <h3>Стул «Classic»</h3>
+            <p>Удобная форма, благородная порода дерева</p>
+          </div>
+        </div>
+        <!-- Элемент 2 -->
+        <div class="portfolio-item">
+          <img src="img/стул2 ракурс1.jpg" alt="Стул 2">
+          <div class="portfolio-text">
+            <h3>Стул «Modern»</h3>
+            <p>Современный дизайн для стильного интерьера</p>
+          </div>
+        </div>
+        <!-- Элемент 3 -->
+        <div class="portfolio-item">
+          <img src="img/стул2 ракурс2.jpg" alt="Кресло 1">
+          <div class="portfolio-text">
+            <h3>Кресло «Relax»</h3>
+            <p>Эргономика и комфорт в каждой детали</p>
+          </div>
+        </div>
+        <!-- Элемент 4 -->
+        <div class="portfolio-item">
+          <img src="img/стул2 ракурс2.jpg" alt="Стол 1">
+          <div class="portfolio-text">
+            <h3>Стол «Harmony»</h3>
+            <p>Идеален для трапез и встреч с друзьями</p>
+          </div>
+        </div>
+        <!-- Элемент 5 -->
+        <div class="portfolio-item">
+          <img src="img/стул1.jpg" alt="Комод 1">
+          <div class="portfolio-text">
+            <h3>Комод «Elegance»</h3>
+            <p>Сочетание вместительности и утончённого стиля</p>
+          </div>
+        </div>
+        <!-- Элемент 6 -->
+        <div class="portfolio-item">
+          <img src="img/стул1.jpg" alt="Стол 2">
+          <div class="portfolio-text">
+            <h3>Стол «Minimal»</h3>
+            <p>Лаконичный дизайн, подчеркивающий текстуру дерева</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Просто фото (middle-image) -->
+  <section class="middle-image">
+    <div class="container">
+      <img src="img/фон.jpg" alt="Описание фото" />
+    </div>
+  </section>
+
+  <!-- 4. О нас (минималистичное + преимущества) -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>О нас</h2>
+      <div class="about-minimal">
+        <p>
+          Мы создаём эксклюзивные предметы интерьера из натурального дерева,
+          подчеркивающие уникальный характер любого пространства. Каждая деталь
+          выполняется вручную по высоким стандартам качества и дизайна.
+        </p>
+        <p>
+          Используем проверенные традиции и современные технологии, чтобы изделия были не только стильными, но и долговечными.
+        </p>
+      </div>
+
+  <!-- Блок преимуществ (с градиентными иконками) -->
+<div class="about-features">
+  <!-- 1. Сроки -->
+  <div class="feature-item">
+    <!-- Градиентная "иконка" -->
+    <div class="feature-icon icon-deadlines"></div>
+    <h3>Сроки</h3>
+    <p>
+      Ценим ваше время и строго соблюдаем оговорённые сроки. Благодаря чёткой организации работы вы можете рассчитывать на качественный результат без лишних задержек.
+    </p>
+  </div>
+
+  <!-- 2. Уникальный дизайн -->
+  <div class="feature-item">
+    <div class="feature-icon icon-unique"></div>
+    <h3>Уникальный дизайн</h3>
+    <p>
+      Мы разрабатываем проекты, которые гармонично сочетают современный стиль. Каждое изделие уникально — отражает вашу идею и становится ярким акцентом в интерьере.
+    </p>
+  </div>
+
+  <!-- 3. Экологичность -->
+  <div class="feature-item">
+    <div class="feature-icon icon-eco"></div>
+    <h3>Экологичность</h3>
+    <p>
+      Мы бережно относимся к природе, минимизируя отходы и сохраняя ресурсы.
+    </p>
+  </div>
+
+  <!-- 4. Поддержка на каждом этапе -->
+  <div class="feature-item">
+    <div class="feature-icon icon-support"></div>
+    <h3>Поддержка на каждом этапе</h3>
+    <p>
+      От первичной консультации до подбора материалов — мы сопровождаем вас на каждом этапе. Вы получаете не только мебель, но и надёжного партнёра, всегда готового помочь.
+    </p>
+  </div>
+</div>
+
+  <!-- 6. Контакты (форма) -->
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <h2>Связаться с нами</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Имя</label>
+          <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Ваш email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Сообщение</label>
+          <textarea id="message" name="message" placeholder="Ваш вопрос или комментарий" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- 7. Подвал (Footer) -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Black In Wood. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Подключаем основной JS-файл (если он есть) -->
+  <script src="scripts.js"></script>
+</body>
+</html>
