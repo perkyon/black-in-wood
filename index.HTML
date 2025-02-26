@@ -7,6 +7,9 @@
   <title>Black In Wood — Пример структуры</title>
   <!-- Подключение шрифтов, стилей и т.д. -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -22,7 +25,7 @@
         <ul class="nav-menu">
           <li><a href="#hero">Главная</a></li>
           <li><a href="#about">О нас</a></li>
-          <li><a href="#portfolio">Каталог</a></li>
+          <li><a href="#catalog">Каталог</a></li>
           <li><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
@@ -57,61 +60,59 @@
 </section>
 
   <!-- 5. Каталог (Портфолио) из 6 элементов -->
-  <section id="portfolio" class="portfolio">
+  <section id="catalog" class="catalog">
     <div class="container">
       <h2>Каталог</h2>
-      <div class="portfolio-grid">
-        <!-- Элемент 1 -->
-        <div class="portfolio-item">
-          <img src="img/стул1.jpg" alt="Стул 1">
-          <div class="portfolio-text">
-            <h3>Стул «Classic»</h3>
-            <p>Удобная форма, благородная порода дерева</p>
-          </div>
+      <div class="catalog-grid">
+        <div class="catalog-item" data-product="classic">
+          <img src="img/кровать.jpg" alt="Стул Classic">
+          <h3 class="product-title">Кровать «Elegance»</h3>
         </div>
-        <!-- Элемент 2 -->
-        <div class="portfolio-item">
-          <img src="img/стул2 ракурс1.jpg" alt="Стул 2">
-          <div class="portfolio-text">
-            <h3>Стул «Modern»</h3>
-            <p>Современный дизайн для стильного интерьера</p>
-          </div>
+        <div class="catalog-item" data-product="modern">
+          <img src="img/стул1.jpg" alt="Стул Modern">
+          <h3>Стул «Modern»</h3>
         </div>
-        <!-- Элемент 3 -->
-        <div class="portfolio-item">
-          <img src="img/стул2 ракурс2.jpg" alt="Кресло 1">
-          <div class="portfolio-text">
-            <h3>Кресло «Relax»</h3>
-            <p>Эргономика и комфорт в каждой детали</p>
-          </div>
+        <div class="catalog-item" data-product="relax">
+          <img src="img/стул2 ракурс1.jpg" alt="Кресло Relax">
+          <h3>Кресло «Relax»</h3>
         </div>
-        <!-- Элемент 4 -->
-        <div class="portfolio-item">
-          <img src="img/стул2 ракурс2.jpg" alt="Стол 1">
-          <div class="portfolio-text">
-            <h3>Стол «Harmony»</h3>
-            <p>Идеален для трапез и встреч с друзьями</p>
-          </div>
+        <div class="catalog-item" data-product="harmony">
+          <img src="img/стул2 ракурс2.jpg" alt="Стол Harmony">
+          <h3>Стол «Harmony»</h3>
         </div>
-        <!-- Элемент 5 -->
-        <div class="portfolio-item">
-          <img src="img/стул1.jpg" alt="Комод 1">
-          <div class="portfolio-text">
-            <h3>Комод «Elegance»</h3>
-            <p>Сочетание вместительности и утончённого стиля</p>
-          </div>
+        <div class="catalog-item" data-product="elegance">
+          <img src="img/стул2 ракурс2.jpg" alt="Комод Elegance">
+          <h3>Комод «Elegance»</h3>
         </div>
-        <!-- Элемент 6 -->
-        <div class="portfolio-item">
-          <img src="img/стул1.jpg" alt="Стол 2">
-          <div class="portfolio-text">
-            <h3>Стол «Minimal»</h3>
-            <p>Лаконичный дизайн, подчеркивающий текстуру дерева</p>
-          </div>
+        <div class="catalog-item" data-product="minimal">
+          <img src="img/стул2 ракурс1.jpg" alt="Стол Minimal">
+          <h3>Стол «Minimal»</h3>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- 4. Модальное окно -->
+  <div id="product-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-left">
+        <div class="slider">
+          <div class="slider-track"></div>
+          <button class="slider-prev">&lt;</button>
+          <button class="slider-next">&gt;</button>
+        </div>
+      </div>
+      <div class="modal-right">
+        <h2 class="product-title"></h2>
+        <p class="product-price"></p>
+        <p class="product-size"></p>
+        <p class="product-materials"></p>
+        <p class="product-legend"></p>
+      </div>
+    </div>
+  </div>
 
   <!-- 3. Просто фото (middle-image) -->
   <section class="middle-image">
